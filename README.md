@@ -50,11 +50,25 @@
     ```
     * Hostname 변경
     ```
-    sudo vim /etc/sysconfig/network
     # HOSTNAME 변경
+    sudo vim /etc/sysconfig/network
+    
+    # hosts 파일 수정
     sudo vim /etc/hosts
     127.0.0.1    HOSTNAME
     
+    # 재부팅
     sudo reboot
     ```
     
+## Docker
+
+1. Install Docker on EC2
+    ```
+    sudo yum update -y
+    sudo yum install docker.x86_64
+    sudo service docker start
+    sudo usermod -a -G docker ec2-user
+    ```
+    > SSH 재접속 또는 docker restart 후 docker ps 확인
+        
