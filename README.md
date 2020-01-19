@@ -48,6 +48,11 @@
     sudo rm /etc/localtime
     sudo ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
     ```
+    * Locale 변경
+    ```
+    sudo vi /etc/sysconfig/i18n
+    LANG=ko_KR.UTF-8
+    ```
     * Hostname 변경
     ```
     # HOSTNAME 변경
