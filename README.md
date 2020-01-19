@@ -32,9 +32,29 @@
         ```
         Host : ec2-user@{{EIP}}
         ```
-            
-        
-1. SSH 접속
-    * ssh ec2-docker-ndp
+    > SSH 접속 : ssh ec2-docker-ndp
+
+1. EC2 Linux 설정
+    * Java 8 설치
+    ```
+    sudo yum list | grep java-1.8
+    sudo yum install java-1.8.0-openjdk-devel.x86_64
     
+    sudo /usr/sbin/alternatives --config java
+    sudo yum remove java-1.7.0-openjdk
+    ```
+    * 타임존 변경
+    ```
+    sudo rm /etc/localtime
+    sudo ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+    ```
+    * Hostname 변경
+    ```
+    sudo vim /etc/sysconfig/network
+    # HOSTNAME 변경
+    sudo vim /etc/hosts
+    127.0.0.1    HOSTNAME
+    
+    sudo reboot
+    ```
     
