@@ -52,7 +52,11 @@
     ```
     sudo vi /etc/sysconfig/i18n
     LANG=ko_KR.UTF-8
+    
+    source /etc/sysconfig/i18n
     ```
+    > locale -a 로 ko_KR.UTF-8 이 안보일때는 locale-gen ko_KR.UTF-8
+    
     * Hostname 변경
     ```
     # HOSTNAME 변경
