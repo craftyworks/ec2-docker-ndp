@@ -55,7 +55,8 @@
     
     source /etc/sysconfig/i18n
     ```
-    > locale -a 로 ko_KR.UTF-8 이 안보일때는 locale-gen ko_KR.UTF-8
+    > locale -a 로 ko_KR.UTF-8 이 안보일때는 설치가 필요
+    > locale-gen ko_KR.UTF-8 또는 localedef -f UTF-8 -i ko_KR ko_KR.UTF-8
     
     * Hostname 변경
     ```
