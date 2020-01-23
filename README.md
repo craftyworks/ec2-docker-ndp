@@ -81,4 +81,9 @@
     sudo usermod -a -G docker ec2-user
     ```
     > SSH 재접속 또는 docker restart 후 docker ps 확인
+    
+    * centos/7 
+    ```
+    sudo usermod -a -G dockerroot $USER
+    ```
         
